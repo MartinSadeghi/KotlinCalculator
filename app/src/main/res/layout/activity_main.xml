@@ -16,6 +16,9 @@
         android:background="#efefef"
         android:textSize="48sp"
         android:maxLength="12"
+        android:hint="0"
+        android:padding="15dp"
+        android:gravity="right|center_vertical|bottom"
 
         />
     <!--Row 1-->
@@ -67,7 +70,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="/"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:layout_margin="1dp"
 
             />
@@ -121,7 +124,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="*"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:layout_margin="1dp"
 
             />
@@ -175,7 +178,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="-"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:layout_margin="1dp"
 
             />
@@ -197,7 +200,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="."
-            android:onClick="onDigit"
+            android:onClick="onDecimalPoint"
             android:layout_margin="1dp"
 
             />
@@ -214,23 +217,23 @@
             />
 
         <Button
-            android:id="@+id/btnAdd"
+            android:id="@+id/btnClear"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text=""
-            android:onClick="onDigit"
+            android:text="C"
+            android:onClick="clearBtn"
             android:layout_margin="1dp"
 
             />
 
         <Button
-            android:id="@+id/btnClean"
+            android:id="@+id/btnAdd"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="C"
-            android:onClick="onDigit"
+            android:text="+"
+            android:onClick="onOperator"
             android:layout_margin="1dp"
 
             />
@@ -251,7 +254,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="="
-            android:onClick="onDigit"
+            android:onClick="onEqual"
             android:layout_margin="1dp"
 
             />
